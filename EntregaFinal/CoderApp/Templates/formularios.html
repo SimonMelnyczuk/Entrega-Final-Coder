@@ -1,0 +1,68 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<title> {% block tittle %} Formularios {% endblock %}</title>
+<div class="row">
+    <div class="col-sm-4 col-md-4 col-lg-4col-sm-8">
+        <h2>Agrege un cactus</h2>
+        <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <form action="{% url 'registrarCactus' %}" method="POST">{% csrf_token %}
+                <div class="form-group">
+                    <input type="text" name="txtnombre" class="from-control" minlength="2" maxlength="30" placeholder="Nombre del cactus" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txtnombreCientifico" class="from-control" minlength="2" maxlength="30" placeholder="Nombre Cientifico del cactus" required >
+                </div>
+                <div class="form-group">
+                    <input type="number" name="txtdiasSinAgua" class="from-control" minlength="2" maxlength="15" placeholder="Dias sin Agua"  required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block twxt-pink">Guardar cactus </button>
+            </form>
+        </div>
+        </div>   
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4col-sm-8">
+        <h2>Agrege un Arbol</h2>
+        <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <form action="{% url 'registrarArbol' %}" method="POST">{% csrf_token %}
+                <div class="form-group">
+                    <input type="text" name="txtnombre" class="from-control" minlength="2" maxlength="30" placeholder="Nombre del arbol" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txtnombreCientifico" class="from-control" minlength="2" maxlength="30" placeholder="Nombre Cientifico del arbol" required >
+                </div>
+                <div class="form-group">
+                    <input type="number" name="txtalturaMax" class="from-control" minlength="2" maxlength="15" placeholder="Altura Maxima del arbol"  required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block twxt-pink">Guardar arbol </button>
+            </form>
+        </div>
+        </div>   
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4col-sm-8">
+            <h2>Agrege una planta</h2>
+            <div class="card" style="width: 25rem;">
+            <div class="card-body">
+                <form action="{% url 'registrarPlanta' %}" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="txtnombre" class="from-control" minlength="2" maxlength="30" placeholder="Nombre de la planta" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtnombreCientifico" class="from-control" minlength="2" maxlength="30" placeholder="Nombre Cientifico de la planta" required >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtdeInterior" class="from-control" minlength="2" maxlength="30" placeholder="Es de Interior?"  required>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block twxt-pink">Guardar planta </button>
+                </form>
+            </div>
+            </div>   
+        </div>
+
+{% endblock %}

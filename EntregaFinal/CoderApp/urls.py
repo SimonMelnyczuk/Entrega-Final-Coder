@@ -1,0 +1,30 @@
+from django.urls import path
+from .import views
+from django.contrib.auth.views import LogoutView
+urlpatterns=[
+    path('',views.inicio,name='inicio'),
+    path('planta',views.planta,name='planta'),
+    path('arbol',views.arbol,name='arbol'),
+    path('cactus',views.cactus,name='cactus'),
+    path('registrarArbol',views.registrarArbol,name='registrarArbol'),
+    path('registrarPlanta',views.registrarPlanta,name='registrarPlanta'),
+    path('registrarCactus',views.registrarCactus,name='registrarCactus'),
+    path('buscarPlanta',views.buscarPlanta),
+    path('buscarArbol',views.buscarArbol),
+    path('buscarCactus',views.buscarCactus),
+    path('leerPlantas',views.leerPlantas, name='leerPlantas'),
+    path('eliminarPlanta/<planta_nombre>/', views.eliminarPlanta, name="eliminarPlanta"),
+    path('editarPlanta/<planta_nombre>/', views.editarPlanta, name="editarPlanta"),
+    path('leerArboles',views.leerArboles, name='leerArboles'),
+    path('eliminarArbol/<arbol_nombre>/', views.eliminarArbol, name="eliminarArbol"),
+    path('editarArbol/<arbol_nombre>/', views.editarArbol, name="editarArbol"),
+    path('leerCactus',views.leerCactus, name='leerCactus'),
+    path('eliminarCactus/<cactus_nombre>/', views.eliminarCactus, name="eliminarCactus"),
+    path('editarCactus/<cactus_nombre>/', views.editarCactus, name="editarCactus"),      
+    path('login', views.login_request, name='login'),
+    path('register', views.register, name='register'),
+    path('logout', LogoutView.as_view(template_name='logout.html'), name='logout'),
+    path('formularios', views.formularios,name='formularios'),
+    path('needAdmin',views.needAdmin,name='needAdmin'),
+    path('sobreMi',views.sobreMi,name='sobreMi'),
+ ]

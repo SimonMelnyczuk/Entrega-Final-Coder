@@ -1,0 +1,44 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<title> {% block tittle %} cactus {% endblock %}</title>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <h1>Listado de cactus</h1>
+        <div class="table-responsive">
+             <table class="table table-striped">
+                <thead> 
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Nombre Cientifico</th>
+                        <th>Dias Sin Agua</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in cactus %}
+                    <tr>
+                        <td> {{c.nombre}}</td>
+                        <td> {{c.nombreCientifico}}</td>
+                        <td> {{c.diasSinAgua}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+             </table>   
+        </div>
+    </div>
+    <div class="col ">
+        <h1>Podes buscar un cactus:</h1>
+  
+        <form action="buscarCactus" method="post">{% csrf_token %}
+    
+            <input type="txt" name="nombre" id="nombre">
+    
+            <input type="submit" value="Buscar">  
+        
+            <button><a href="{% url 'leerCactus' %}"class="btn btn-primary">EditarTabla</a></button>        
+    </div>
+
+    </div>
+</div>
+{% endblock %}

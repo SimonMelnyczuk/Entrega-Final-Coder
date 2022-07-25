@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<title> {% block tittle %} Leer Arboles {% endblock %}</title>
+
+    {% for c in arboles %}
+        <li>{{c.nombre}}<button>
+            <a class="btn btn-danger" style="border: solid 1px;padding:2px;" href="{% url 'eliminarArbol' c.nombre %}">Eliminar</a></button>
+            <button><a class="btn btn-warning" style="border: solid 1px;padding:2px" href="{% url 'editarArbol' c.nombre %}">Editar</a>
+            
+        </button></li>
+    {% endfor %}
+    <br>
+    <br>
+    <a href="{% url 'formularios' %}">Agregar otro arbol</a>
+
+{% endblock %}

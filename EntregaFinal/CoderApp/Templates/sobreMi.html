@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<title> {% block tittle %} Sobre Mi {% endblock %}</title>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 h-100 text-center text-lg-start my-auto" style= padding:5% >
+            <ul class="list-inline mb-2">
+                <p> Mi nombre es simon melnyczuk tengo 20 años y desarolle esta pagina a partir de python usando el framework Django a partir de lo 
+                    aprendido en el curso de backend CoderHouse. Esta conectada a una base de datos (SQlite) en la cual se puede mantener agregando contenido
+                    ya que admite bootstrap para los modelos, javascript para agregar funcionalidades y css para los diseños
+                    La idea de esta pagina es poder tener un formulario online donde cargar datos de un vivero familiar y sabiendo que se nececita
+                    con la opcion para que un usuario pueda agregar plantas, cactus y arboles en caso de no aparecer en las tablas.  
+                </p>
+        </div>              
+    </div> 
+</div>    
+{% endblock %}

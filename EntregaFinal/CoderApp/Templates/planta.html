@@ -1,0 +1,45 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<title> {% block tittle %} Planta {% endblock %}</title>
+
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <h1>Listado de plantas</h1>
+        <div class="table-responsive">
+             <table class="table table-striped">
+                <thead> 
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Nombre Cientifico</th>
+                        <th>Es De Interior?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in planta %} 
+                    <tr>
+                        <td> {{c.nombre}}</td> 
+                        <td> {{c.nombreCientifico}}</td>
+                        <td> {{c.deInterior}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+             </table>   
+        </div>
+        
+    </div>
+        <div class="col ">
+            <h1>Podes buscar una planta:</h1>
+      
+            <form action="buscarPlanta" method="post">{% csrf_token %}
+        
+                <input type="txt" name="nombre" id="nombre">
+        
+                <input type="submit" value="Buscar">  
+
+
+        <button><a href="{% url 'leerPlantas' %}"class="btn btn-primary">EditarTabla</a></button>            
+    </div>
+</div>
+{% endblock %}

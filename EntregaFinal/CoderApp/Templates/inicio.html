@@ -1,0 +1,60 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<title> {% block tittle %} inicio {% endblock %}</title>
+<div> <header class="masthead">
+  <div class="container position-relative">
+      <div class="row justify-content-center">
+          <div class="col-xl-6">
+              <div class="text-center text-white">
+                  <!-- Page heading-->
+                  <h1 class="mb-5"> Plantae Vivero </p></h1>
+                                   
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+<h1 >{{mensaje}}</h1>
+<br>
+
+</div>
+<div class="container">
+  <h1> Sobre nosotros </h1>
+
+  <p>Somos un emprendimiento familiar de vivero y jardinería. Encontrarás todo para decorar tu parque y jardín. Conocenos.... Si no encontrás lo que buscás, lo traemos por pedido. </p>
+    
+  <span id="hideText" class="hideText">
+    <p>Hay una tendencia que cada vez crece más, sobre todo debido al cambio climático que estamos  viviendo, el impulso por la vida sana y  proyectos más sustentables.
+
+      Esta tendencia son las plantas, ya sea decorativas, o como huertas que  consideran distintos tipos de verduras y hortalizas. Son cada vez más las personas que deciden tener una pequeña huerta en su casa, e incluso en departamentos. O bien que decoran sus lugares de trabajo con alguna plantita pequeña, que no requiera de mucho cuidado como los cáctus. 
+      
+      Cada día es más habitual que empresas entreguen a sus trabajadores como regalo una pequeña planta,  siendo muy bien evaluados.
+      
+      Por eso si aún no sabes que negocio formar, este puede ser una alternativa, ya que si bien a muchas nos gusta o nos gustaría tener una pequeña huerta en casa, o alguna planta bonita, muchas veces no tenemos tiempo de hacerlo y ahí está la oportunidad de negocio.
+      
+      Qué mejor que preparar una comida, y sacar romero fresco de tu propia cocina o aliñar con ciboulette que tú misma cosechaste. 
+      
+      Es un negocio en apariencia sencillo, amigable con el medio ambiente y con la vida sana. Solo debes elegir recipientes o maceteros, incluso puedes hacerlos tu misma con madera o vasos que ya no utilices. Plantar las semillas y cuidarlas hasta que empiecen a crecer y puedan ser entregadas a un futuro dueño.
+      
+      Otra opción es comprar los almácigos listos y cuidarlos hasta poder traspasarlos a un nuevo recipiente, que le entregue más onda y sea ideal para decorar y darle vida a los espacios.
+      
+      Un buen lugar donde ofrecer estos productos es en alguna empresa, donde las pequeñas plantas que no requieran de muchos cuidados pueden ser una gran decoración para los espacios. 
+      
+      También puedes dirigirte a edificios o departamentos, donde no tienen un patio grande donde plantar o crear una huerta y tú puedes llenar esta necesidad con pequeñas huertas o maceteros con alguna verdura o hierba.
+      
+      Así que si estás buscando un negocio con el que emprender, y la, decoración y jardinería son lo tuyo, esta es tu oportunidad. 
+      
+      Mira el caso de Magglia Coppa, quien en Pitrufquén desarrolló su emprendimiento verde y hoy tiene un invernadero. </p>
+  </span>
+
+  <button class="readMore_btn" id="readMore_btn">Ver mas</button>
+
+</div>
+
+
+<script src="{% static 'CoderApp/js/scripts.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<title> {% block tittle %} Login {% endblock %}</title>
+<body>
+    <form action="" method="POST">{%csrf_token%}
+        
+        {{form.as_p}}
+
+       <button type="submit"class="btn btn-primary"> Iniciar Sesión</button>
+       <button><a href="register"class="btn btn-secondary">Si no tiene usuario, puede registrarse.</a></button>
+    
+</body>
+</html>
+{% endblock %}

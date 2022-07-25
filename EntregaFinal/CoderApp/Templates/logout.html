@@ -1,0 +1,15 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<title> {% block tittle %} Logout {% endblock %}</title>
+
+<body>
+    <div>
+        <h1>Deslogueado</h1>
+        <button><a class="btn btn-warning" href=" {% url 'login' %}"class="btn btn-warning">Vuelve a iniciar sesion</a></button>
+    </div>
+</body>
+{% endblock %}
